@@ -370,6 +370,64 @@ select {
   cursor: pointer;
 }
 
+.bioContainer {
+  max-width: 40px; /* Set a max width for the container */
+
+}
+
+
+#content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: Center;
+  align-items: flex-start;
+  
+}
+
+#side-Container {
+  width: 40%;
+  padding-right: 5%;
+}
+body{
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(209, 203, 203, 0.288) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(209, 203, 203, 0.288) 1px, transparent 1px);
+}
+
+#DemoVideo {
+  
+  flex-shrink: 0;    
+  padding-top: 5%;
+  max-width: 100%;
+  max-height:100%;
+ /* Adjust the value for more or less rounding */
+  overflow: hidden;    /
+}
+h2{
+  text-align:center;
+  margin-top:10%;
+}
+h4{
+  text-align: left;
+  margin-left:5px;
+}
+.Description {
+  margin-bottom: 20px;
+  font-size: 1.1rem;    
+}
+
+#bio {
+  width: 65%;            /* Set the width of the text block */
+  margin: 0 auto;        /* Center the block horizontally */
+  padding-top: 1.5%;
+  padding-bottom: 2.5%;
+  font-size: 1.2em; /* Increase font size */
+  line-height: 1.5; /* Improve readability with line height */
+  color: #333; /* Darker text color */
+  text-align: center; /* Center the text */
+  max-width: 100%;
+}
 select {
   word-wrap: normal;
 }
@@ -491,6 +549,8 @@ progress {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  /* Centers text within the section */
+
 }
 
 .display-1 {
@@ -600,7 +660,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
 }
 
@@ -639,6 +699,7 @@ progress {
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
+  
   margin-right: auto;
   margin-left: auto;
 }
@@ -3202,6 +3263,7 @@ textarea.form-control-lg {
 .dropdown-toggle {
   white-space: nowrap;
 }
+
 .dropdown-toggle::after {
   display: inline-block;
   margin-left: 0.255em;
@@ -7649,6 +7711,7 @@ textarea.form-control-lg {
 }
 
 .mb-0 {
+  margin-top: 2.5%;
   margin-bottom: 0 !important;
 }
 
@@ -10931,7 +10994,7 @@ p.lead {
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin-right: 5rem;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
@@ -10946,15 +11009,20 @@ p.lead {
 
 section.resume-section {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   max-width: 75rem;
+  text-align: center; /* Centers text within the section */
+  margin: 0 auto; /* Centers the section itself within its parent */
 }
 section.resume-section .resume-section-content {
   width: 100%;
+  max-width: 100%;
+  
 }
 
 @media (min-width: 768px) {
