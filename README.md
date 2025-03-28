@@ -9,7 +9,6 @@ This website showcases my work, projects, blog posts, and other information abou
 ## Features
 
 - **Portfolio:** View my projects and work samples.
-- **Mac and Cheese Review Blog:** Read my latest reviews and ratings of various mac and cheese dishes.
 - **Resume:** Download my latest resume to learn more about my professional experience and skills.
 - **About Me:** Learn more about who I am, my background, and skills.
 - **Contact:** Get in touch with me through various channels.
