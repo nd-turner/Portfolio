@@ -11073,16 +11073,19 @@ section.resume-section .resume-section-content {
 
   background-color: #bd5d38;
 }
+
 #Experience{
   background-color: #D3D3D3;
   border: 1px solid black;
   opacity: 0.5;
 }
+
 .Experience_Education_Information{
   border: 1px solid black;
   
 
 }
+
 .experience-card {
   font-size: 1.1 rem; 
   display: flex;
@@ -11126,4 +11129,31 @@ section.resume-section .resume-section-content {
   border-radius: 50%;    /* Makes it circular */
   object-fit: cover;     /* Ensures the image scales properly */
   border: 2px solid #ccc; /* Optional: adds a border around the circle */
+}
+
+.skills-section {
+  margin: 40px auto;                /* Center horizontally */
+  max-width: 800px;                 /* Limit width */
+  text-align: center;              /* Center text inside */
+}
+
+.skills-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;         /* Center skill items */
+  gap: 10px;
+}
+
+.skill {
+  background-color: #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
 }
