@@ -11119,3 +11119,11 @@ section.resume-section .resume-section-content {
   font-size: 1rem;
   
 }
+
+.company-logo {
+  width: 60px;           /* Adjust size as needed */
+  height: 60px;
+  border-radius: 50%;    /* Makes it circular */
+  object-fit: cover;     /* Ensures the image scales properly */
+  border: 2px solid #ccc; /* Optional: adds a border around the circle */
+}
