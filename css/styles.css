@@ -11034,7 +11034,7 @@ section.resume-section {
 section.resume-section .resume-section-content {
   width: 85%;
   max-width: 100%;
-  margin-top: -3rem;
+ 
   
 }
 
@@ -11087,31 +11087,39 @@ section.resume-section .resume-section-content {
 }
 
 .experience-card {
-  font-size: 1.1 rem; 
+  font-size: 1.1rem;
   display: flex;
   align-items: flex-start;
-  border-radius: 8px; 
-  padding: 12px; 
-  margin-bottom: 0rem; 
-  max-width: 700px; 
-  color:#000;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  color: #000;
   text-align: left;
-} 
+}
 
 .company-logo {
-   width: 60px; 
-   height: 60px; 
-   object-fit: contain; 
-   margin-right: 16px;
-} 
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  margin-right: 16px;
+}
 
-.experience-content h3 { 
-  margin: 0 0 4px; 
-} 
+.experience-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  text-align: left;
+  color: #000;
+  font-size: 1rem;
+  list-style-position: inside;
+}
+
 
 .company-name { 
-   font-size: 0.7rem;
-    margin-bottom: 8px;
+  font-size: 0.7rem;
+  margin-bottom: 8px;
   color:#000;
  } 
 
@@ -11132,9 +11140,9 @@ section.resume-section .resume-section-content {
 }
 
 .skills-section {
-  margin: 40px auto;                /* Center horizontally */
-  max-width: 800px;                 /* Limit width */
-  text-align: center;              /* Center text inside */
+  margin: 10px auto 40px auto; /* Top, Right/Left, Bottom */
+  max-width: 800px;
+  text-align: center;
 }
 
 .skills-section h2 {
