@@ -11101,11 +11101,44 @@ section.resume-section .resume-section-content {
   text-align: left;
 }
 
+.education-card {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  color: #000;
+  text-align: left;
+}
+.toggle-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
 .company-logo {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: scale-down;
   border: 2px solid #ccc;
   margin-right: 16px;
 }
@@ -11119,6 +11152,14 @@ section.resume-section .resume-section-content {
   list-style-position: inside;
 }
 
+.education-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  text-align: left;
+  color: #000;
+  font-size: 1rem;
+  list-style-position: inside;
+}
 
 .company-name { 
   font-size: 0.7rem;
