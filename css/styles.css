@@ -11077,16 +11077,24 @@ section.resume-section .resume-section-content {
   background-color: #bd5d38;
 }
 
-#Experience{
-  background-color: #D3D3D3;
-  border: 1px solid black;
-  opacity: 0.5;
-}
-
 .Experience_Education_Information{
   border: 1px solid black;
-  
 
+}
+
+.company-name, .education-name { 
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+  color:#000;
+ } 
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  border: 2px solid #ccc;
+  margin-right: 16px;
 }
 
 .experience-card {
@@ -11103,7 +11111,7 @@ section.resume-section .resume-section-content {
 
 .education-card {
   font-size: 1.1rem;
-  display: flex;
+  display: none;
   align-items: flex-start;
   border-radius: 8px;
   padding: 12px;
@@ -11111,18 +11119,18 @@ section.resume-section .resume-section-content {
   max-width: 700px;
   color: #000;
   text-align: left;
-  display: none;
 }
+
+.experience-content ul, .education-content ul { 
+  padding-left: 0rem; margin: 0; 
+  text-align: left;
+  color:#000;
+  font-size: 1rem;
+  
+}
+
 .hidden {
   display: none;
-}
-
-.toggle-section {
-    display: none;
-}
-
-.active-section {
-    display: block;
 }
 
 .toggle-btn {
@@ -11139,57 +11147,8 @@ section.resume-section .resume-section-content {
     color: white;
 }
 
-.company-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: scale-down;
-  border: 2px solid #ccc;
-  margin-right: 16px;
-}
-
-.experience-content ul {
-  padding-left: 1.2rem;
-  margin: 0;
-  text-align: left;
-  color: #000;
-  font-size: 1rem;
-  list-style-position: inside;
-}
-
-.education-content ul {
-  padding-left: 1.2rem;
-  margin: 0;
-  text-align: left;
-  color: #000;
-  font-size: 1rem;
-  list-style-position: inside;
-}
-
-.company-name { 
-  font-size: 0.7rem;
-  margin-bottom: 8px;
-  color:#000;
- } 
-
-.experience-content ul { 
-  padding-left: 0rem; margin: 0; 
-  text-align: left;
-  color:#000;
-  font-size: 1rem;
-  
-}
-
-.company-logo {
-  width: 60px;           /* Adjust size as needed */
-  height: 60px;
-  border-radius: 50%;    /* Makes it circular */
-  object-fit: cover;     /* Ensures the image scales properly */
-  border: 2px solid #ccc; /* Optional: adds a border around the circle */
-}
-
 .skills-section {
-  margin: 10px auto 40px auto; /* Top, Right/Left, Bottom */
+  margin: 10px auto 40px auto;
   max-width: 800px;
   text-align: center;
 }
@@ -11203,7 +11162,7 @@ section.resume-section .resume-section-content {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;         /* Center skill items */
+  justify-content: center;
   gap: 10px;
 }
 
