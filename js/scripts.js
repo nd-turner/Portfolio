@@ -28,11 +28,27 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 function toggle_Experience() {
-  console.log("The div was clicked.");
+    const eduSections = document.querySelectorAll(".education-card");
+    eduSections.forEach(eduSections => {
+        eduSections.style.display = "none";
+    });
+
+     const ExperienceSections = document.querySelectorAll(".experience-card");
+    ExperienceSections.forEach(ExperienceSections => {
+        ExperienceSections.style.display = "flex";
+    });
 }
 
 function toggle_Education(){
-    console.log("The div was clicked Edu")
+    const eduSections = document.querySelectorAll(".education-card");
+    eduSections.forEach(eduSections => {
+        eduSections.style.display = "flex";
+    });
+
+     const ExperienceSections = document.querySelectorAll(".experience-card");
+    ExperienceSections.forEach(ExperienceSections => {
+        ExperienceSections.style.display = "none";
+    });
 }
 
 document.getElementById("ExperienceSelector").addEventListener("click", toggle_Experience); 

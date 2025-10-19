@@ -11111,7 +11111,12 @@ section.resume-section .resume-section-content {
   max-width: 700px;
   color: #000;
   text-align: left;
+  display: none;
 }
+.hidden {
+  display: none;
+}
+
 .toggle-section {
     display: none;
 }
