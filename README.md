@@ -1,6 +1,6 @@
 # My Personal Website
 
-This project serves as my online portfolio and personal space on the web. You can visit the live website [here](https://nd-turner.github.io/nd-turner.github.io./).
+This project serves as my online portfolio and personal space on the web. You can visit the live website [here](https://nd-turner.github.io/Portfolio/).
 
 ## Overview
 
