@@ -1,36 +1,96 @@
 <!DOCTYPE html>
-
-<html>
+<html lang = "en">
 
 <head>
-
+	<meta charset = "utf-8"/>
+	<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<meta name = "description" content ="zero voltage switching driver circuit"/>
+	<meta name = "author" content = "Nathan Turner"/>
 <title>
-ZVS_Driver
+Nathan Turner | ZVS_Driver
 </title>
-<body>
-This project is actually one part of a future project that I am in the process of developing. This project entails assembling a high voltage driver capable of turning just a measly 12v into high voltage suitable for driving various high voltage experiments such as tesla coils etc.
 
-One of the most common types of circuits used for generating high voltage is the Zero Voltage Switching Driver circuit. The circuit functions as a form of an astable multivibrator also know as a Royer oscillator. One of the main differences is of course that it uses an LC tank circuit to produce sine waves instead of the typical square waves you normally see with a multivibrator. 
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+</head>
 
-the ZVS driver gets its name since the mosfets turn on when the voltage accross them is near zero. This helps eliminate switching losses and emi. One of the most common ways to utilize a ZVS driver is to drive a flyback converter to get thousands of volts.
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav"> 
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/ndturner/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/nd-turner"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/nathan_turner01/"><i class="fab fa-instagram"></i></a>
+                </div>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Pendulum Model</span>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" 
+                         src="assets/img/NT_LOGO.jpg" 
+                         alt="..." 
+                         style="width: 200px; height: 200px; object-fit: cover;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">													                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="BOIDS.html">BOIDS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="PhysicsEngine.html">Physics_Engine</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="ZVS_Driver.html">ZVS_Driver</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <h2>Zero Voltage Switching Driver</h2>
+        <div id = "content">
+           
+        <div id = "side-Container">
+            
+            <div id = "Description">
+		    <p>
+This project is actually one part of a future project that I am in the process of developing. This project entails assembling a high voltage driver capable of turning just a measly 12v into high voltage suitable for driving various high voltage experiments such as tesla coils etc. Read the following guide on high voltage safety practices.
+<a href="https://lasers.colostate.edu/wp-content/uploads/2019/04/High-Voltage-Safety-Manual.pdf">High Voltage Safety Manual</a>
+		    </p>
+	    <p>
 
-It's worth mentioning that due to the high voltage nature of this circuit it should be treated as extrememly dangerous. In fact this circuit is more than capable of instantly killing if handled improperly. Please do not try this at home.
 
-Now that the disclaimer is out there, you can see below a simulation of the ZVS driver in action. Some things to note include the reasonance between the capacitor and the inductor, as well as the voltage and the current being 90 degrees out of phase of each other.
+One of the most common types of circuits used for generating high voltage is the Zero Voltage Switching Driver circuit. The circuit functions as a form of an astable multivibrator also know as a Royer oscillator. One of the main differences is of course that it uses an LC tank circuit to produce sine waves instead of the typical square waves you normally see with a multivibrator. See below a circuit js simulation of a ZVS driver in action.
+		    </p>
 
 <iframe id = "circuitFram" src = "https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjOCmC0AcKwHQCZZgJwHYCstaYGZ1jtsRlMQyAWAqmMMAKADNx1lzqAGL35HiAKcy3FKxDUwANj5Dp8Ab2FUQY5EwDuc5NllKhyXty3z4w5QvJ61TAtRAAvSADtIAJ2hhsiWRDCImGC02KgYYdyRyDCU-IiRCYlJsA7evuBMjuCYshbZ+oKczm6eadJ2DsUeXj7S0Jz+gcEEoWgcaAnR0LHk8Un9kSngtRlZtJx54zpOrtVl9abhcmA5cibaUgW8Uwbrkip5BFZ5ewZ5K7lGtu7g1A4GwQ4n4IlMN9TS94IfT1e8YK8Np85DtBHsfoZtgc-otVuc7pDbNpHstVrsmABzITcJ5HbFPUJqJH4oR4gg4xF7cm-fiCE6mamIo7mGEAE3yqL80n44AAclJqLAmOzQVCGtzyHyBULkasZP8OOAJSYbiiHgj5UTqJgVZJgQYIZrtjqmAAbOQqB6oIliSIQMTYdDcVCwZDSN3UXToAixM1mQz+sDW4x9e2IAGYJ2YQXcaM+6jYPHglSaqYo5MNBHqhynQRBxR5hF7Jaa5lK4yLDUSlEqYsIy10zjg4Gp4G10wQg7HJtMABuJOgBwpMhtkmUxhtiGwDIpXZZxMZDeUPaxjMHEwp0GBFfNFE4ZzxuzUfQSLRA0GwARw1Mj3DQ1992j3OkwDUVVMPdLxSxMAGNyK+7ATN+77HkkdDdNQ4bSEG3gwegjCJvAtrcMwT6AUsDzvqYBjIAIyzYU+eaKtmC4gRMVg-gylESmW+YLjRljwFR2h0YqZZ4TmM6pLks49gA9pInDIWOxDli8yCIDmkqekITBAA" width = "600" height = "400" title = "ZVS_Driver"></iframe>
 
-It is worth noting that technically the ZVS driver steps up both the voltage and current of the circuit. At first glance you might think that this would break the laws of thermodynamics and you would be correctif this was real power. However, since both voltage and current are 90 degrees out of phase almost all of this power is reactive.
+		    <p>
+The ZVS driver gets its name since the mosfets turn on when the voltage accross them is near zero. This helps eliminate switching losses and emi. One of the most common ways to utilize a ZVS driver is to drive a flyback converter to get thousands of volts. It's interesting to note that the ZVS driver makes use of reasonance, to generate super high voltages. It is worth noting that technically the ZVS driver steps up both the voltage and current of the circuit. At first glance you might think that this would break the laws of thermodynamics, however since both voltage and current are 90 degrees out of phase almost all of this power is reactive. See below an image of the power triangle that shows the relationship between real and reactive power.
+		    </p>
 
 <img src = "assets/img/PowerTriangle.png" alt= "PowerTriangle">
+		    <p>
 
+It's worth mentioning that due to the high voltage nature of this circuit it should be treated as extrememly dangerous. In fact this circuit is more than capable of instantly killing if handled improperly. 
+		    </p>
+            </div>
+<div id = "Description"> 
+	<p>
 Here you can see a picture of the ZVS circuit that I put together. The ZVS circuit itself is from a kit for building a tesla coil, this kit came along with the included pcb as well as all of the required components.
+	</p>
 
-it's worth mentioning that the setup that you see below is actually not my original setup. The first setup that I had I used an old atx power supply that I bought of ebay. These power supplies are capable of suppling 30 to 45A of current continuous. However when I hooked this power supply up to the ZVS driver I got some small arcs at the flyback, but nothing like what I would expect. Shortly after playing around the arcs I heard a loud pop in my power supply and it no longer turns on. I opened it up to look at the fuse, and the fuse is still in tact. I could troubleshoot further but fo the time being, I will be using this bench switch mode power supply that I got off of amazon. This one has current limiting ability, so I should be able to control the driver more effectively.
+<img src = "assets/img/ZVS_Setup.jpg" width="400" height="400" alt = "Zero Voltage Switching Setup">
+	
+	<p>I should mention the setup shown above is actually not my original setup. In my original setup, I used an old atx power supply that I bought of ebay. These power supplies are capable of suppling 30 to 45A of current continuous, so I thought that it would be more than cpaable of supplying the driver. However when I hooked this power supply up to the ZVS driver I got weak arcs at the flyback. After playing around with the setup I heard a loud pop in my power supply, it would seem that I damaged the supply as it no longer turns on. I opened it up to look at the damage and couldn't find any obvious issues. I could troubleshoot further but for the time being, I will be using this bench switch mode power supply that I got off of amazon. This one has current limiting ability, so I should be able to control the driver more effectively.
 
-<img src = "assets/img/AtxPowerSupply.jpeg" width="500" height="500" alt = "ZVS Setup">
+	</p>
 
+<img src = "assets/img/AtxPowerSupply.jpeg" width="400" height="400" alt = "Atx power supply setup">
+	<p>
 Below you can see a video of an arc being created at the output of flyback transformers primary. Although it may be a crude measurement based on the size of the arc if we assume it to be around 1.5cm then the voltage would be approximately 45000 volts. Since the turns on the primary is around 7. We can estimate the voltage on the secondary to be around 6500 volts. Of course in reality it would be a bit lower due primarily to core loses.
+	</p>
+        <video width="500"  autoplay muted loop id = "Arcing">
+            <source src="assets/Video/arcing.mp4" type="video/mp4">
+            browser does not support video
+	</video>
+	<p>
+Anyhow I thought that this was a cool experiment. It's always fun to play with high voltage arcs. It was interesting learning more about high voltage reasonant supplies. I hope in the future I can use this driver for other high voltage projects.
+	</p>
 
-
-Anyhow I thought that this was a cool experiemnt. It's always fun to play with high voltage arcs. I plan on using this driver to drive a tesla coil. So stay tuned if you'd be interested in that.
+    </body>
+</html>

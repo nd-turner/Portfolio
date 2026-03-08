@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 /*!
 * Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
 * Copyright 2013-2023 Start Bootstrap
@@ -385,7 +385,7 @@ select {
 }
 
 #side-Container {
-  width: 40%;
+  width: 80%;
   padding-right: 5%;
 }
 body{
@@ -397,18 +397,19 @@ body{
 
 #DemoVideo {
   
-/* flex-shrink: 0;   */ 
-  
   max-width: 100%;
   max-height:100%;
   padding:5px;
   border-radius:15px;
   margin-top:80px;
   overflow:hidden;
+}
 
- /* Adjust the value for more or less rounding */
- 
- 
+#Arcing {
+max-width:auto;
+max-height:400;
+padding5px;
+overflow:hidden;
 }
 
 h2{
