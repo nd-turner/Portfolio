@@ -385,8 +385,8 @@ select {
 }
 
 #side-Container {
-  width: 80%;
-  padding-right: 5%;
+  width: 70%;
+	text-align:Center;
 }
 body{
   background-size: 60px 60px;
@@ -408,7 +408,7 @@ body{
 #Arcing {
 max-width:auto;
 max-height:400;
-padding5px;
+padding:5px;
 overflow:hidden;
 }
 
