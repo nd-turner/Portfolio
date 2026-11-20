@@ -401,6 +401,7 @@ body{
   max-height:100%;
   padding:5px;
   border-radius:15px;
+  margin-top:-20px;
   overflow:hidden;
 }
 
