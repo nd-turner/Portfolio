@@ -54,7 +54,7 @@ This project involved the use of pygame and python to implement a 2d boid simula
 
 
 The main components of a BOID program / algorithm can be broken down into three main parts. Essentially each individual agent adheres to three main rules. 
-<ol><li><strong>Seperation</strong></li>
+<h3>Seperation</h3>
 this rule essentially tells the agents to avoid each other. This rule encapsulates things such as distance between agents as well as adhereance to the formation. each agent / boid can detect other boids within a seperation radius. Then each agent will calulate a vector pointing away from its neighbor and change its velocity accordingly.
 <br />
 <br />
@@ -62,7 +62,7 @@ this rule essentially tells the agents to avoid each other. This rule encapsulat
 <img src = "assets/img/Rule_separation.gif" alt = "seperation" >
 <br />
 <br />
-<li><strong>Alignment</strong></li>
+<h3>Alignment</h3>
 This rule essentially dictates the flow of the swarm of the boids. It's what makes the boids swarm and move as one formation. 
 This is done via identifying neighbors within a defined radius and then calculating the average heading of each neighbor. 
 Once calculated the agent will move towards that heading, adjusting its velocity.
@@ -72,7 +72,7 @@ Once calculated the agent will move towards that heading, adjusting its velocity
 <img src = "assets/img/Rule_alignment.gif" alt = "Alignment" >
 <br />
 <br />
-<li><strong>Cohesion</strong></li>
+<h3>Cohesion</h3>
 This rule makes the boids stick together. It defines how tight the formation is. 
 This is done by calculating a center of mass of the formation / groups of neightbors and then adjusting the velocity vector to move towards it.
 <br />
@@ -80,14 +80,14 @@ This is done by calculating a center of mass of the formation / groups of neight
 
 
 <img src = "assets/img/Rule_cohesion.gif" alt = "cohesion">
-<br />
-<br />
+
+
 
 </ol>
-
+<br />
+<br />
 <p>
 for the purpose of this project I wanted to experiment with implementing this behavior in a simple simulation. The following video is showing a project that uses pygame to make a 2d boid simulation. The code can be found at the following <a href = "https://github.com/nd-turner/ECE_443/tree/main/FinalProject">repo</a> on my github. I also implemented / played around with obstacle collision detection and avoidance. 
-
 </p>
 
 </p>
