@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset = "utf-8"/>
+	<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<meta name = "description" content ="zero voltage switching driver circuit"/>
+	<meta name = "author" content = "Nathan Turner"/>
+<title>
+Nathan Turner | BOIDS
+</title>
+
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav"> 
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/ndturner/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/nd-turner"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/nathan_turner01/"><i class="fab fa-instagram"></i></a>
+                </div>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Pendulum Model</span>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" 
+                         src="assets/img/NT_LOGO.jpg" 
+                         alt="..." 
+                         style="width: 200px; height: 200px; object-fit: cover;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">													                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="BOIDS.html">BOIDS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="PhysicsEngine.html">Physics_Engine</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="ZVS_Driver.html">ZVS_Driver</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <h2>Bird like object (BOIDS)</h2>
+        <div id = "content">
+           
+        <div id = "side-Container">
+            
+            <div id = "Description">
+		    <p>
+This project involved the use of pygame and python to implement a 2d boid simulation. Boids are essentially a common way to implement emergent behavior. This essentially means that there is a mathematical system defined that rely's on the interaction of individual agents. You can read more about boids in the following wikipedia <a href="https://en.wikipedia.org/wiki/Boids">here</a>
+		    </p>
+	    <p>
+
+
+The main components of a BOID program / algorithm can be broken down into three main parts. Essentially each individual agent adheres to three main rules. 
+<ol><li><strong>Seperation</strong></li>
+this rule essentially tells the agents to avoid each other. This rule encapsulates things such as distance between agents as well as adhereance to the formation. each agent / boid can detect other boids within a seperation radius. Then each agent will calulate a vector pointing away from its neighbor and change its velocity accordingly.
+<img src = "assets/img/Rule_separation.gif" alt = "seperation" >
+<li><strong>Alignment</strong></li>
+This rule essentially dictates the flow of the swarm of the boids. It's what makes the boids swarm and move as one formation. This is done via identifying neighbors within a defined radius and then calculating the average heading of each neighbor. Once calculated the agent will move towards that heading, adjusting its velocity.
+<img src = "assets/img/Rule_alignment.gif" alt = "Alignment" >
+
+<li><strong>Cohesion</strong></li>
+This rule makes the boids stick together. It defines how tight the formation is. This is done by calculating a center of mass of the formation / groups of neightbors and then adjusting the velocity vector to move towards it.
+<img src = "assets/img/Rule_cohesion.gif" alt = "cohesion">
+
+</ol>
+
+<p>
+for the purpose of this project I wanted to experiment with implementing this behavior in a simple simulation. The following video is showing a project that uses pygame to make a 2d boid simulation. The code can be found at the following <a href = "https://github.com/nd-turner/ECE_443/tree/main/FinalProject">repo</a> on my github. I also implemented / played around with obstacle collision detection and avoidance. 
+
+</p>
+
+</p>
+ <video width="550" autoplay muted loop id = "DemoVideo">
+            <source src="assets/Video/Boid.mp4" type="video/mp4">
+            browser does not support video
+        </video>
+
+	<p>
+I'm not really sure why but for whatever reason the behavior of BOIDS has always interested me. I plan to explore this concept in more depth in the future. It would be cool to see this behavior implemented in 3d. It would also be cool to implement this with a shader of some sort since I have some loose affinity wiht opengl.
+    </p>
+
+    </body>
+</html>
